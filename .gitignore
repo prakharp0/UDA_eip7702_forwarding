@@ -1,0 +1,27 @@
+# Node modules
+node_modules/
+backend/node_modules/
+assignment_1/node_modules/
+
+# Environment variables
+.env
+backend/.env
+assignment_1/.env
+
+
+# Dependency directories
+backend/package-lock.json
+assignment_1/package-lock.json
+
+
+# Hardhat/solidity artifacts
+assignment_1/cache/
+assignment_1/artifacts/
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Misc
+*.tgz
+*.tar.gz

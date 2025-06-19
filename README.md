@@ -15,7 +15,7 @@ This project demonstrates a unified deposit address system across multiple block
 ## Smart Contract
 - Implements logic to allow a whitelisted relayer to forward USDC to a recipient address
 - Deployable on multiple EVM-compatible testnets
-- EIP-7702 upgradeable wallet support
+
 
 ## Backend Services
 - Listens for USDC transfers to the unified deposit address on each chain
@@ -29,8 +29,6 @@ This project demonstrates a unified deposit address system across multiple block
    ```
 2. **Install dependencies**
    ```bash
-   yarn install
-   # or
    npm install
    ```
 3. **Configure Environment**

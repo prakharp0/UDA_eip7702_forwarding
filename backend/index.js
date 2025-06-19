@@ -4,12 +4,13 @@ import { sepoliaTransferToReceiptent } from './sepolia.js'
 import { baseSepoliaTransferToReceiptent } from './base_sepolia.js'
 
 
-
+// Public Client for eth sepolia, wont be used to sign txns
 const client = createPublicClient({
   chain: sepolia,
   transport: http(process.env.SEPOLIA_RPC),
 });
 
+// Public Client for base sepolia, wont be used to sign txns
 const client2 = createPublicClient({
   chain: baseSepolia,
   transport: http(process.env.BASE_SEPOLIA_RPC),
@@ -21,7 +22,8 @@ const TRANSFER_EVENT = parseAbiItem(
 );
 
 try{
-    await client.watchEvent({
+  // Listening for USDC Transfer event on eth sepolia
+  await client.watchEvent({
   address: process.env.USDC_ADDR_SEPOLIA,
   event: TRANSFER_EVENT,
   onLogs: (logs) => {
@@ -35,6 +37,7 @@ try{
   },
 });
 
+// Listening for USDC Transfer event on base sepolia
 await client2.watchEvent({
   address: process.env.USDC_ADDR_BASE_SEPOLIA,
   event: TRANSFER_EVENT,

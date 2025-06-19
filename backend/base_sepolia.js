@@ -3,8 +3,10 @@ import { privateKeyToAccount } from 'viem/accounts'
 import { baseSepolia } from 'viem/chains'
 import 'dotenv/config'
 
+// eoa account from private key
 const eoa = privateKeyToAccount(process.env.PRIVATE_KEY_UDA)
 
+// deployed forwarder contract from private key
 const contractAddress = process.env.FORWARDER_BASE_SEPOLIA_ADDR;
 const abi = [
     {
@@ -56,6 +58,7 @@ const abi = [
     }
   ]
 
+// relayerAccount from private key
 const relayerAccount = privateKeyToAccount(process.env.PRIVATE_KEY_BASE_SEPOLIA)
 
 async function baseSepoliaTransferToReceiptent() {

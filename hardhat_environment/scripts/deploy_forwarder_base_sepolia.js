@@ -4,7 +4,8 @@ import hre from 'hardhat'
 async function main() {
     const [deployer] = await hre.ethers.getSigners();
     console.log("Using :" + deployer.address + " to deploy");
-
+    
+    // Addresses for constructor
     const receipent = process.env.RECIPIENT_BASE_SEPOLIA;
     const usdc = process.env.USDC_ADDR_BASE_SEPOLIA;
     const relayer = process.env.RELAYER_BASE_SEPOLIA;

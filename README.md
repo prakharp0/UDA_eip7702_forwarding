@@ -25,7 +25,7 @@ This project demonstrates a unified deposit address system across multiple block
 1. **Clone the repository**
    ```bash
    git clone https://github.com/prakharp0/enclaveMoney_assignment.git
-   cd enclaveMoney_assignment
+   cd UDA_eip7702_forwarding
    ```
 2. **Install dependencies**
    ```bash
